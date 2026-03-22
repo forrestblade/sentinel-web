@@ -1,0 +1,226 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #0f1117;
+  color: #e0e0e0;
+  line-height: 1.5;
+  padding: 1rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #2a2d35;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f0f0f0;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #c0c0c0;
+  margin-bottom: 0.75rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge.state-idle { background: #1a3a2a; color: #4ade80; }
+.badge.state-planning { background: #1a2a3a; color: #60a5fa; }
+.badge.state-developing { background: #3a2a1a; color: #fb923c; }
+.badge.state-reviewing { background: #2a1a3a; color: #c084fc; }
+.badge.state-unknown { background: #2a2d35; color: #9ca3af; }
+
+.stats-bar {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: #181a20;
+  border-radius: 8px;
+  border: 1px solid #2a2d35;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f0f0f0;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.filters select,
+.filters input {
+  background: #181a20;
+  color: #e0e0e0;
+  border: 1px solid #2a2d35;
+  border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  font-family: inherit;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn:hover { background: #1d4ed8; }
+.btn:active { background: #1e40af; }
+
+.verify-result {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.verify-result.valid { color: #4ade80; }
+.verify-result.invalid { color: #f87171; }
+.verify-result.error { color: #fbbf24; }
+
+.table-wrap {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+thead th {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 2px solid #2a2d35;
+  color: #9ca3af;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  position: sticky;
+  top: 0;
+  background: #0f1117;
+}
+
+tbody td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #1e2028;
+  white-space: nowrap;
+}
+
+tbody tr:hover {
+  background: #181a20;
+}
+
+td.empty {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+}
+
+td.tool-name {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", monospace;
+  font-size: 0.8rem;
+  max-width: 350px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+td.event-gate_allow { color: #4ade80; }
+td.event-gate_deny { color: #f87171; }
+td.event-post_receipt { color: #60a5fa; }
+td.event-transition { color: #fb923c; }
+
+.timeline {
+  margin-bottom: 2rem;
+}
+
+.timeline-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 1px;
+  height: 80px;
+  padding: 0.5rem 0;
+}
+
+.timeline-bar {
+  flex: 1;
+  background: #2563eb;
+  min-width: 2px;
+  border-radius: 2px 2px 0 0;
+  transition: background 0.15s;
+}
+
+.timeline-bar:hover {
+  background: #60a5fa;
+}

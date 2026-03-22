@@ -1,0 +1,39 @@
+{
+  "name": "sentinel-web",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Browser-based dashboard for Sentinel FSM audit trail",
+  "bin": {
+    "sentinel-web": "bin/sentinel-web.js"
+  },
+  "files": [
+    "dist",
+    "public",
+    "bin"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "validate": "tsc --noEmit && eslint .",
+    "start": "node bin/sentinel-web.js"
+  },
+  "author": "Forrest",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@valencets/resultkit": "^0.1.0",
+    "chainproof": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@vitest/coverage-v8": "^4.0.0",
+    "neostandard": "^0.12.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.0.0"
+  }
+}

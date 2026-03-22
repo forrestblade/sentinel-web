@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentinel Dashboard</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>Sentinel Dashboard</h1>
+    <div id="state-badge" class="badge">--</div>
+  </header>
+
+  <section id="stats-bar" class="stats-bar">
+    <div class="stat">
+      <span class="stat-value" id="stat-total">--</span>
+      <span class="stat-label">Receipts</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value" id="stat-tools">--</span>
+      <span class="stat-label">Tools</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value" id="stat-uptime">--</span>
+      <span class="stat-label">Uptime</span>
+    </div>
+  </section>
+
+  <section class="controls">
+    <div class="filters">
+      <label>
+        Tool
+        <select id="filter-tool"><option value="">All</option></select>
+      </label>
+      <label>
+        Event
+        <select id="filter-event"><option value="">All</option></select>
+      </label>
+      <label>
+        State
+        <select id="filter-state"><option value="">All</option></select>
+      </label>
+      <label>
+        Limit
+        <input id="filter-limit" type="number" min="1" value="100" style="width: 70px">
+      </label>
+    </div>
+    <div class="actions">
+      <button id="btn-verify" class="btn">Verify Chain</button>
+      <span id="verify-result" class="verify-result"></span>
+    </div>
+  </section>
+
+  <section class="table-wrap">
+    <table id="receipts-table">
+      <thead>
+        <tr>
+          <th>Seq</th>
+          <th>Time</th>
+          <th>Tool</th>
+          <th>Event</th>
+          <th>State</th>
+        </tr>
+      </thead>
+      <tbody id="receipts-body">
+        <tr><td colspan="5" class="empty">Loading...</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="timeline" class="timeline">
+    <h2>Session Timeline</h2>
+    <div id="timeline-bars" class="timeline-bars"></div>
+  </section>
+
+  <script src="/app.js"></script>
+</body>
+</html>
