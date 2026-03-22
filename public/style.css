@@ -148,8 +148,11 @@ h2 {
 .verify-result.error { color: #fbbf24; }
 
 .table-wrap {
-  overflow-x: auto;
+  overflow: auto;
   margin-bottom: 2rem;
+  max-height: 60vh;
+  border: 1px solid #2a2d35;
+  border-radius: 8px;
 }
 
 table {
