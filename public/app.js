@@ -120,8 +120,8 @@ function refreshReceipts() {
         '<td>' + r.seq + '</td>' +
         '<td>' + formatTime(r.timestamp) + '</td>' +
         '<td class="tool-name">' + escapeHtml(truncateTool(r.tool_name)) + '</td>' +
-        '<td class="event-' + r.event + '">' + r.event + '</td>' +
-        '<td>' + r.state + '</td>' +
+        '<td class="event-' + escapeHtml(r.event) + '">' + escapeHtml(r.event) + '</td>' +
+        '<td>' + escapeHtml(r.state) + '</td>' +
       '</tr>';
     });
     tbody.innerHTML = rows.join('');

@@ -37,7 +37,7 @@ export default [
     }
   },
   {
-    files: ['vitest.config.ts', 'eslint.config.js'],
+    files: ['vitest.config.ts', 'eslint.config.js', 'playwright.config.ts'],
     rules: {
       'no-restricted-syntax': 'off'
     }

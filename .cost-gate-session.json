@@ -1,7 +1,7 @@
 {
   "started": "2026-03-22T00:26:55.470Z",
-  "totalTokens": 21199,
-  "totalCost": 0.063597,
+  "totalTokens": 112104,
+  "totalCost": 0.336312,
   "budget": 10,
-  "calls": 59
+  "calls": 311
 }
