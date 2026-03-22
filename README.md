@@ -17,6 +17,10 @@ sentinel-web --port 8080  # custom port
 
 Then open http://localhost:3000 in your browser.
 
+## Screenshot
+
+![Sentinel Dashboard](screenshots/dashboard.png)
+
 ## Features
 
 - Current FSM state badge (color-coded)
